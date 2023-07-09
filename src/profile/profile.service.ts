@@ -1,5 +1,6 @@
 import { HttpStatus, Injectable } from "@nestjs/common";
 import { Response } from "express";
+import { CreateProfileDto } from "./dto/create.dto";
 
 @Injectable()
 export class ProfileService{
@@ -12,7 +13,8 @@ export class ProfileService{
         }
     }
 
-    create(createProfileDto) {
+    create(createProfileDto: CreateProfileDto) {
+        console.log(typeof createProfileDto.gender)
         return createProfileDto;
     }
 

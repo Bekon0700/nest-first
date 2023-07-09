@@ -1,4 +1,9 @@
-import { IsString, IsNumber } from "class-validator";
+import { IsString, IsNumber, IsArray, IsEnum } from "class-validator";
+
+export enum Gender {
+    Male = 'Male',
+    Female = 'Female'
+}
 
 export class CreateProfileDto{
     @IsString()
@@ -9,4 +14,10 @@ export class CreateProfileDto{
 
     @IsString()
     phone: String;
+
+    @IsArray()
+    hobby: []
+
+    @IsEnum(Gender)
+    gender: Gender;
 }
