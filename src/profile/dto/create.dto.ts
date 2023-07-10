@@ -16,7 +16,7 @@ export class CreateProfileDto{
     phone: String;
 
     @IsArray()
-    hobby: []
+    hobby: String[]
 
     @IsEnum(Gender)
     gender: Gender;
